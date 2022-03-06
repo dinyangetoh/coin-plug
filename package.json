@@ -12,6 +12,7 @@
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/mongoose": "^9.0.2",
+    "@nestjs/passport": "^8.2.1",
     "@nestjs/platform-express": "^8.0.0",
     "bcrypt": "^5.0.1",
     "class-transformer": "^0.5.1",
@@ -19,6 +20,8 @@
     "crypto": "^1.0.1",
     "migrate-mongo": "^8.2.3",
     "mongoose": "^6.2.4",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
     "tslib": "^2.0.0"

@@ -10,15 +10,13 @@ export class UsersService {
   constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {
   }
 
-  private readonly users: User[] = [
-    {name: 'David Inyang-Etoh', age: 26},
-    {name: 'James Brown', age: 16},
-    {name: "Ekpe Ikot", age: 21}
-  ];
-
   create(createUserDto: CreateUserDto): Promise<User> {
     const createUser = new this.userModel(createUserDto)
     return createUser.save();
+  }
+
+  async findOne(filter: Partial<User>): Promise<User> {
+    return this.userModel.findOne(filter).lean();
   }
 
   findAll(): Promise<User[]> {
