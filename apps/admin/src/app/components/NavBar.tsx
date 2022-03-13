@@ -1,9 +1,10 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="bg-indigo-800 p-6">
-      <div className="container flex items-center justify-between flex-wrap ">
+      <div className="container mx-auto flex items-center justify-between flex-wrap ">
         <div className="flex items-center text-white mr-0">
           <svg className="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
                xmlns="http://www.w3.org/2000/svg">
@@ -15,17 +16,14 @@ const NavBar = () => {
 
         <div className="w-full block flex lg:flex lg:items-end lg:w-auto">
           <div className="text-sm lg:flex-end">
-            <a href="#responsive-header"
-               className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-              Docs
-            </a>
-            <a href="#responsive-header"
-               className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-              Examples
-            </a>
-            <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-              Blog
-            </a>
+            <Link to="/"
+                  className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+              Home
+            </Link>
+            <Link to='/users'
+                  className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+              Users
+            </Link>
           </div>
         </div>
       </div>
