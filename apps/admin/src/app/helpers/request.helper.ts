@@ -1,5 +1,7 @@
 import axios, {Method} from "axios";
 
+axios.defaults.baseURL = process.env["API_BASE_URL"] || 'http://localhost:3333/api';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 export const fetcher = async (
   url: string,
