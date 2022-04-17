@@ -2,18 +2,21 @@ import {AppProps} from 'next/app';
 import Head from 'next/head';
 import './styles.css';
 import './global.css'
+import Layout from "../src/components/layouts/Layout";
 
-function CustomApp({Component, pageProps}: AppProps) {
+const App = ({Component, pageProps}: AppProps) => {
   return (
     <>
       <Head>
         <title>Coin Plug: Gateway to your digital assets</title>
       </Head>
       <main className="app">
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </main>
     </>
   );
 }
 
-export default CustomApp;
+export default App;
