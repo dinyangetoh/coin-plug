@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import MenuLinks from "./MenuLinks";
 
 const NavBar = () => {
   return (
@@ -15,16 +15,7 @@ const NavBar = () => {
         </div>
 
         <div className="w-full block flex lg:flex lg:items-end lg:w-auto">
-          <div className="text-sm lg:flex-end">
-            <Link to="/"
-                  className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-              Home
-            </Link>
-            <Link to='/users'
-                  className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-              Users
-            </Link>
-          </div>
+          <MenuLinks listStyle="inline"/>
         </div>
       </div>
     </nav>
